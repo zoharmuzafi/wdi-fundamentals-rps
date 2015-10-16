@@ -72,4 +72,31 @@ function playToFive() {
     }    
     return [playerWins, computerWins];
 }
+Function playTo(x)
+{
+ console.log("Let's play Rock, Paper, Scissors");
+    var playerWins = 0;
+    var computerWins = 0;
+    var playerMove;
+    var computerMove;
+    while ((computerWins<x)&&(playerWins<x))
+    {
+        playerMove=getInput();
+        computerMove= randomPlay();
+        console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+        if (getWinner(playerMove,computerMove)== "player")
+        {
+            playerWins +=1;
+            console.log("Player won")
+        }
+        else
+        {
+            computerWins+=1;
+            console.log("computer won")
+        }
+        onsole.log('The score is currently- Player: ' + playerWins + ' to ' + 'Computer:' computerWins + '\n');
+    }    
+    return [playerWins, computerWins];
+}   
+}
 
