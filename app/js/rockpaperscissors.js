@@ -47,56 +47,58 @@ function getWinner(playerMove,computerMove)
     return winner;
 }
 
-function playToFive() {
+function playToFive() 
+{
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
-    var playerMove;
-    var computerMove;
+    var playerMove=null;
+    var computerMove=null;
     while ((computerWins<5)&&(playerWins<5))
     {
         playerMove=getInput();
         computerMove= randomPlay();
-        console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
+        console.log('Player chose ' + playerMove + ' while Computer chose '         + computerMove);
         if (getWinner(playerMove,computerMove)== "player")
         {
             playerWins +=1;
-            console.log("Player won")
+            console.log("Player won");
         }
         else
         {
             computerWins+=1;
-            console.log("computer won")
+            console.log("computer won");
         }
-        onsole.log('The score is currently- Player: ' + playerWins + ' to ' + 'Computer:' computerWins + '\n');
-    }    
-    return [playerWins, computerWins];
+        console.log('The score is currently- Player: ' + playerWins +  "to         Computer" + computerWins + '\n');
+        }    
+    return (playerWins, computerWins);
+    
 }
-Function playTo(x)
+function playTo(x)
 {
  console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
     var playerMove;
     var computerMove;
-    while ((computerWins<x)&&(playerWins<x))
-    {
+    while ((computerWins<x)&&(playerWins<x)){
         playerMove=getInput();
         computerMove= randomPlay();
         console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
         if (getWinner(playerMove,computerMove)== "player")
         {
             playerWins +=1;
-            console.log("Player won")
+            console.log("Player won");
         }
         else
         {
             computerWins+=1;
-            console.log("computer won")
+            console.log("computer won");
         }
-        onsole.log('The score is currently- Player: ' + playerWins + ' to ' + 'Computer:' computerWins + '\n');
+        console.log('The score is currently- Player: ' + playerWins + ' to ' + 'Computer:'+  computerWins + '\n');
     }    
     return [playerWins, computerWins];
-}   
+   
 }
+
 
